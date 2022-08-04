@@ -2,14 +2,14 @@ import userModel from '../models/userModel';
 import { User } from '../interfaces/userInterface';
 
 const userService = {
-
-  async create(user: User): Promise<User>{
-    return await userModel.create(user);
+  async getAll(): Promise<User[]> {
+    const user = await userModel.getAll();
+    return user;
   },
-  async login(email: string, password: string){
-    return await userModel.login(email, password);
-  }
+  async create(user: User): Promise<User>{
+    const create = await userModel.create(user);
+    return create;
+  },
 };
-
 
 export default userService;
