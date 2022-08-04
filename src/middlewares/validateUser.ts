@@ -30,7 +30,7 @@ function validationPassword(req: Request, res: Response, next: NextFunction) {
       { error: 'Password must be a string' },
     );
   }
-  if (password.length < 8) {
+  if (password.length < 6) {
     return res.status(422).json({ 
       error: 'Password must be longer than 7 characters' });
   }
