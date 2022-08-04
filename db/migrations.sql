@@ -1,7 +1,6 @@
 drop database if exists `db`;
 create database `db`;
 use `db`;
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
 
 create table `users`(
 	`id` int not null auto_increment primary key,
