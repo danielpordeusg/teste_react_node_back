@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  db:
+    image: mysql
+    container_image: mysql:5.7
+    environment:
+      - MYSQL_USER=daniel
+      - MYSQL_PASSWORD=daniel232
+      - MYSQL_NAME=db
+    volumes:
+      - ./:/app
+    restart: always
+    ports:
+      - 3001:3306
+  node:
+    image: node:16
+    container_name: teste_react_node
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
