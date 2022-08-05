@@ -18,7 +18,7 @@ npm install
 
 2 - set suas variaveis de ambiente com .env e receba elas na connection
 
-3 - rode o serve com npm run dev na porta 3001
+3 - rode o serve com npm run dev na porta 3001. caso alguma porta esteja sendo usada vocẽ pode altera pra funcionar
 
 4 - Com o servidor Up vocẽ já pode ir pra o front end  
 
