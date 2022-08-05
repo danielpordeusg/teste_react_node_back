@@ -21,3 +21,7 @@ npm install
 3 - rode o serve com npm run dev na porta 3001
 
 4 - Com o servidor Up vocẽ já pode ir pra o front end  
+
+extras: 
+
+*feito com Typescript*
