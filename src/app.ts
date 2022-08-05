@@ -2,7 +2,7 @@ import express from 'express';
 import { errorHandlerMiddleware } from './middlewares/middleError';
 import { userRoutes } from './routes/userRouter';
 import { loginRoutes } from './routes/loginRouter';
-import postRouter  from './routes/postRouter';
+import  postRouter from './routes/postRouter';
 import cors from 'cors';
 
 const app = express();

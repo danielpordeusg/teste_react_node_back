@@ -27,11 +27,12 @@ const postController = {
   },
   async update(req:Request, res: Response, next: NextFunction){
     try {
-      const { message, id } = req.body;
+      const { message } = req.body;
+      const { id } = req.params;
       if(!message) return res.status(404).json({
         message: 'messagem não encontrada'
       });
-      const update = await postService.update(id, message);
+      const update = await postService.update(Number(id), message);
       return res.status(200).json(update);
     } catch (error) {
       return next(error);
