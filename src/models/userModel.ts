@@ -26,7 +26,7 @@ const userModel = {
     return { id: insertId, ...user};
   },
   async login(email: string, password:string) {
-    const query = 'SELECT id, email, password FROM db.users WHERE `email`=? and `password`=?' ;
+    const query = 'SELECT id, email, name FROM db.users WHERE `email`=? and `password`=?' ;
     const [result] = await database.execute(query, [email, password]);
     const user = (result as User[])[0];
     return user;
