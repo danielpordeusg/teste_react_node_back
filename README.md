@@ -12,7 +12,7 @@ npm install
 
 ------------------------------------------------------------------------
 
- PASSOS DE CONFIGURALÇÃO
+ PASSOS DE CONFIGURAÇÃO
 
 1 - suba um container docker usando o comando docker run --name mysql -p 12010:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5
 
