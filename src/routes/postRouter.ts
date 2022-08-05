@@ -7,7 +7,7 @@ postRouter.get('/', postController.getAll);
 
 postRouter.post('/', postController.create);
 
-postRouter.put('/', postController.update);
+postRouter.put('/:id', postController.update);
 
 postRouter.delete('/:id', postController.remove);
 
