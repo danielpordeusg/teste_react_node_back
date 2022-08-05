@@ -7,11 +7,13 @@ import { Post } from '../interfaces/postInterface';
 export const postModel = {
   async getAll(): Promise<Post[]> {
     const query = `
-    select
-    id,
-    message,
-    user_id as userId
-    from db.posts
+    SELECT
+    posts.id as id,
+    posts.message as message,
+    posts.user_id as userId,
+    users.name as userName
+    FROM db.posts as posts
+    LEFT JOIN db.users as users ON posts.user_id = users.id
     `;
     const [rows] = await database.query(query);
     return rows as Post[];
@@ -33,11 +35,9 @@ export const postModel = {
   async update(id: number, message: string){
     const query ='UPDATE db.posts SET `message` = ? WHERE `id` = ?';
     const post = await database.execute(query, [message, id]);
-    console.log(message, id);
-    console.log(post);
     return (post);
-
   },
+
   //deletar uma postagem
   async remove(id: number) {
     const query = ' DELETE FROM db.posts WHERE `id` = ?';
