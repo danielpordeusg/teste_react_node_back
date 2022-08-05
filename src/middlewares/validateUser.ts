@@ -42,11 +42,15 @@ function validationPassword(req: Request, res: Response, next: NextFunction) {
 function validationEmail(req: Request, res: Response, next: NextFunction){
   const user: User = req.body;
   const { email } = user;
+  const regexEmail = /\S+@\S+\.\S+/; 
   if(!email) return res.status(400).json({error: 'email is required'});
   if(typeof email !== 'string'){
     return res.status(422).json({
       error: 'email must be a string'
     });
+  }
+  if (!regexEmail.test(email)) {
+    return res.status(400).json({ message: 'O "email" deve ter o formato "email@email.com"' });
   }
   next();
 }
