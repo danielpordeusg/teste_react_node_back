@@ -16,8 +16,8 @@ npm install
 
 1 - suba um container docker usando o comando docker run --name mysql -p 12010:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5
 
-2 - set suas variaveis de ambiente com .env e recebela elas na connection
+2 - set suas variaveis de ambiente com .env e receba elas na connection
 
 3 - rode o serve com npm run dev na porta 3001
 
-3 - Com o servidor Up vocẽ já pode ir pra o front end  
+4 - Com o servidor Up vocẽ já pode ir pra o front end  
